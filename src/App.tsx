@@ -3,7 +3,7 @@ import { ThemeProvider } from './contexts/ThemeContext';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Gallery from './components/Gallery';
-import Transport from './components/Transport';
+
 import Location from './components/Location';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
