@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
+import { ThemeProvider } from './contexts/ThemeContext';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Gallery from './components/Gallery';
-import Excursions from './components/Excursions';
+import Transport from './components/Transport';
 import Location from './components/Location';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -22,7 +23,8 @@ function App() {
       'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=800',
       'https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&cs=tinysrgb&w=600',
       'https://images.pexels.com/photos/1579253/pexels-photo-1579253.jpeg?auto=compress&cs=tinysrgb&w=600',
-      'https://images.pexels.com/photos/2869215/pexels-photo-2869215.jpeg?auto=compress&cs=tinysrgb&w=600'
+      'https://images.pexels.com/photos/2869215/pexels-photo-2869215.jpeg?auto=compress&cs=tinysrgb&w=600',
+      'https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?auto=compress&cs=tinysrgb&w=800'
     ];
 
     imageUrls.forEach((url) => {
@@ -32,18 +34,20 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
-      <main>
-        <Hero />
-        <Gallery />
-        <Excursions />
-        <Location />
-        <Contact />
-      </main>
-      <Footer />
-      <ScrollToTop />
-    </div>
+    <ThemeProvider>
+      <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+        <Header />
+        <main>
+          <Hero />
+          <Gallery />
+          <Transport />
+          <Location />
+          <Contact />
+        </main>
+        <Footer />
+        <ScrollToTop />
+      </div>
+    </ThemeProvider>
   );
 }
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin, MessageCircle, Clock } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Footer = () => {
@@ -8,14 +8,14 @@ const Footer = () => {
   const quickLinks = [
     { name: 'Главная', href: '#hero' },
     { name: 'Галерея', href: '#gallery' },
-    { name: 'Экскурсии', href: '#excursions' },
+    { name: 'Транспорт', href: '#transport' },
     { name: 'Контакты', href: '#contact' },
   ];
 
   const services = [
     'Бронирование номеров',
     'Трансфер из аэропорта',
-    'Экскурсионные туры',
+    'Транспортные услуги',
     'Прокат автомобилей',
     'Ресторан и бар',
     'Конференц-зал'
@@ -29,7 +29,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-900 dark:bg-black text-white transition-colors duration-300">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -52,18 +52,6 @@ const Footer = () => {
               Мы предоставляем лучший сервис для незабываемого отдыха в самом сердце Абхазии. 
               Комфорт, красота природы и гостеприимство ждут вас.
             </p>
-            <div className="flex space-x-4">
-              <motion.a
-                href="https://wa.me/7840123456"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.1 }}
-                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-500 transition-colors"
-                aria-label="WhatsApp"
-              >
-                <MessageCircle size={20} />
-              </motion.a>
-            </div>
           </motion.div>
 
           {/* Quick Links */}
@@ -149,7 +137,7 @@ const Footer = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="border-t border-gray-800 mt-12 pt-8"
+          className="border-t border-gray-800 dark:border-gray-700 mt-12 pt-8"
         >
           <div className="flex flex-col md:flex-row items-center justify-between">
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
