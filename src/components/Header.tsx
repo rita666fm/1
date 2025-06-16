@@ -47,14 +47,18 @@ const Header = () => {
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="flex items-center space-x-3 flex-shrink-0 z-10"
+            className="flex items-center space-x-2 sm:space-x-3 flex-shrink-0 min-w-0"
           >
-            <div className="w-10 h-10 bg-gradient-to-br from-primary-400 to-primary-600 rounded-lg flex items-center justify-center flex-shrink-0">
-              <span className="text-white font-bold text-lg">AH</span>
+            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-primary-400 to-primary-600 rounded-lg flex items-center justify-center flex-shrink-0">
+              <span className="text-white font-bold text-sm sm:text-lg">AH</span>
             </div>
-            <div className="hidden sm:block">
-              <h1 className="text-lg sm:text-xl font-bold text-gray-800 dark:text-white">Абхазия Отели</h1>
-              <p className="text-xs text-gray-600 dark:text-gray-400">Райский отдых у моря</p>
+            <div className="min-w-0">
+              <h1 className="text-sm sm:text-lg lg:text-xl font-bold text-gray-800 dark:text-white truncate">
+                Абхазия Отели
+              </h1>
+              <p className="text-xs text-gray-600 dark:text-gray-400 hidden sm:block truncate">
+                Райский отдых у моря
+              </p>
             </div>
           </motion.div>
 
@@ -73,7 +77,7 @@ const Header = () => {
           </nav>
 
           {/* Right side controls */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2 sm:space-x-4 flex-shrink-0">
             {/* Contact Info - Desktop */}
             <div className="hidden xl:flex items-center space-x-4">
               <div className="flex items-center space-x-2 text-gray-700 dark:text-gray-300">
@@ -93,12 +97,12 @@ const Header = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors relative z-10"
+              className="lg:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
             >
               {isMenuOpen ? (
-                <X size={24} className="text-gray-800 dark:text-white" />
+                <X size={20} className="text-gray-800 dark:text-white" />
               ) : (
-                <Menu size={24} className="text-gray-800 dark:text-white" />
+                <Menu size={20} className="text-gray-800 dark:text-white" />
               )}
             </button>
           </div>
